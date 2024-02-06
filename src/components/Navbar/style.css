@@ -1,0 +1,133 @@
+.nav__container{
+    background: rgba(15, 15, 15, 0.7);
+    backdrop-filter: blur(50px);
+    padding: .5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 30;
+}
+
+.nav__content{
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    margin:  0 auto;
+}
+
+.logo{
+    font-size: 30px;
+    color: var(--primary-color);
+}
+
+.nav__content ul{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+.nav__content li{
+    margin: 0 .15rem;
+}
+
+.menu__item{
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu__item::before{
+    content: ' ';
+    width: 2rem;
+    height: 0.2rem;
+    background: var(--primary-color);
+    border-radius: .5rem;
+    position: absolute;
+    bottom: -0.6rem;
+    opacity: 0;
+    transform: translateX(-1.5rem);
+    transition: all .3s ease;
+}
+
+.menu__item:hover:before{
+    width: 100%;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.curriculo__btn{
+    font-size: 1.3rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: var(--primary-color);
+    padding: .6rem 2rem;
+    border: none;
+    outline: 1.5px solid transparent;
+    border-radius: .2rem;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.curriculo__btn:hover{
+    color: var(--primary-color);
+    background: var(--bg-color);
+    outline: 1.5px solid var(--primary-color);
+}
+
+.menu__btn{
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: .4rem;
+    color: #fff;
+    background: var(--primary-color);
+    line-height: 0;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.menu__btn:hover,
+.menu__btn span:hover{
+    color: var(--primary-color);
+    background: var(--bg-color);
+    border: 1.5px solid var(--primary-color);
+}
+
+.menu__btn span{
+    font-size: 1.8rem;
+    transition: all .3s ease;
+}
+
+@media (max-width: 435px){
+    .logo{
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 769px){
+    .menu__btn{
+        display: flex;
+    }
+
+    .nav__content ul{
+        display: none;
+    }
+}
+
+@media (max-width: 1325px){
+    .nav__container{
+        padding: 0 2rem;
+    }
+}
